@@ -699,6 +699,10 @@ a {
     margin: auto auto auto auto;
 }
 
+.enseign {
+    display: none;
+}
+
 h2 {
     font-size: 22px;
     line-height: 1.4em;
