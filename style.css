@@ -119,22 +119,6 @@ a:hover {
     border-color: rgba(255, 255, 255, .2);
 }
 
-.d-bloc .a-btn,
-.d-bloc .navbar a,
-.d-bloc .navbar-brand,
-.d-bloc a .icon-sm,
-.d-bloc a .icon-md,
-.d-bloc a .icon-lg,
-.d-bloc a .icon-xl,
-.d-bloc h1 a,
-.d-bloc h2 a,
-.d-bloc h3 a,
-.d-bloc h4 a,
-.d-bloc h5 a,
-.d-bloc h6 a,
-.d-bloc p a {
-}
-
 .d-bloc .a-btn:hover,
 .d-bloc .navbar a:hover,
 .d-bloc .navbar-brand:hover,
@@ -269,6 +253,11 @@ a:hover {
 
 .voffset-lg {
     margin-top: 80px;
+}
+
+.coordonees {
+    display: flex;
+    flex-direction: column;
 }
 
 .row-no-gutters {
@@ -529,10 +518,14 @@ button {
     opacity: 1;
 }
 
+.container p {
+    margin-bottom: 30px;
+}
+
 a[data-lightbox] {
     position: relative;
-    display: block;
-    text-align: center;
+    display: flex;
+    justify-content: center;
 }
 
 a[data-lightbox]:hover::before {
@@ -583,6 +576,10 @@ a[data-lightbox]:hover img {
     left: 15px;
     right: 15px;
     bottom: 5px;
+}
+
+.enseign {
+    display: none;
 }
 
 .close-lightbox {
@@ -686,7 +683,7 @@ a {
 }
 
 .cta-hero {
-    margin-top: 22px;
+    margin: 22px 0;
     text-transform: uppercase;
     padding: 12px 28px 12px 28px;
     font-size: 16px;
@@ -695,7 +692,9 @@ a {
 
 .social {
     max-width: 400px;
-    margin: auto auto auto auto;
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-evenly;
 }
 
 .enseign {
@@ -724,8 +723,8 @@ h1 {
     color: #333333!important;
 }
 
-h4 {
-    color: #333333!important;
+.col-sm-4 {
+    padding-bottom: 20px;
 }
 
 .icons {
@@ -738,12 +737,7 @@ h4 {
 }
 
 .portfolio-thumb {
-    margin-bottom: 24px;
-}
-
-.portfolio-row {
-    margin-bottom: 44px;
-    margin-top: 50px;
+    margin-top: 24px;
 }
 
 .avatar {
@@ -819,7 +813,7 @@ h4 {
 }
 
 .bg-presentation {
-    background-image: url("img/image-de-presentation.bmp");
+    background-image: url("img/image-de-presentation.jpg");
 }
 
 @media (max-width: 1024px) {
@@ -845,13 +839,13 @@ h4 {
     }
 }
 
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
     .b-parallax {
         background-attachment: scroll;
     }
 }
 
-@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) {
+@media only screen and (min-width: 1024px) and (max-width: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) {
     .b-parallax {
         background-attachment: scroll;
     }
@@ -869,10 +863,6 @@ h4 {
         overflow-x: hidden;
         position: relative;
     }
-    .bloc {
-        padding-left: constant(safe-area-inset-left);
-        padding-right: constant(safe-area-inset-right);
-    }
     .bloc-group,
     .bloc-group .bloc {
         display: block;
@@ -881,8 +871,6 @@ h4 {
     .bloc-fill-screen .fill-bloc-top-edge,
     .bloc-fill-screen .fill-bloc-bottom-edge {
         padding: 0 20px;
-        padding-left: constant(safe-area-inset-left);
-        padding-right: constant(safe-area-inset-right);
     }
 }
 
@@ -1023,6 +1011,11 @@ h4 {
         width: 180px;
         height: 320px;
     }
+    
+    .portfolio-thumb {
+        width: 55%;
+    }
+
 }
 
 @media (max-width: 400px) {
